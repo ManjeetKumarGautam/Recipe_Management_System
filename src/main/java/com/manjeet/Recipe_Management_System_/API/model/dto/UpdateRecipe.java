@@ -4,10 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SignInDto {
-    private String email;
-    private String password;
+public class UpdateRecipe {
+    private String title;
+    private List<String> ingredients;
+    private List<String> instructions;
 }

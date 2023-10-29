@@ -6,24 +6,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Recipe {
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Integer recipeId;
-    private String title;
-    private List<String> ingredients;
-    private List<String> instructions;
+    private Integer commentId;
 
-    private LocalDateTime postRecipeTimeStamp;
+    @Column(nullable = false)
+    private String commentBody;
+
+    private LocalDateTime commentCreationTimeStamp;
 
     @ManyToOne
-    @JoinColumn(name = "fk_user_id")
-    private User postOwner;
+    @JoinColumn(name = "fk_post_id")
+    private Recipe recipe;
+
+    @ManyToOne
+    @JoinColumn(name = "fk_commenter_id")
+    private User commenter;
 }
