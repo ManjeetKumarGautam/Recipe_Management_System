@@ -10,33 +10,38 @@
 ### 1. Controller
 
 * UserController
-    * userSignUp
-    * userSignIn
-    * userSignOut
-    * getFoods
-    * orderFood
-    * getOrders
+  * signup
+  * signin
+  * signout
+  * postRecipe
+  * getRecipes
+  * getMyRecipes
+  * deleteRecipe
+  * addComment
+  * getComment
+  * removeComment
+  * updateRecipe
 
 ### 2. Services
+* CommentService
+  * clearCommentsByRecipe
+  * addComment
+  * findCommentById
+  * removeCommentById
+  * getCommentOnRecipeId
 
-* AdminService
-    * adminSignUp
-    * adminSignIn
-    * adminSignOut
-
-
-* FoodService
-    * getFoodItems
-    * addFood
-
-
-* OrderService
-    * orderFood
-    * getOrders
-
-
+  
 * PasswordEncrypt
     * encrypt
+
+
+* RecipeService
+  * postRecipe
+  * getRecipeById
+  * getRecipes
+  * getMyRecipes
+  * deleteRecipeById
+  * updateRecipe
 
 
 * TokenService
@@ -46,17 +51,28 @@
 
 
 * UserService
-    * userSignUp
-    * userSignIn
-    * userSignOut
-    * getAllUsers
+  * signup
+  * signIn
+  * signOut
+  * postRecipe
+  * getMyRecipes
+  * deleteRecipe
+  * addComment
+  * removeComment
+  * authorizeCommentRemover
+  * updateRecipe
+  * getCommentByRecipeId
 
 ### 3. Repository
-* IFoodRepo
 
+* CommentRepo
+  * findByRecipe
 
-* IOrderRepo
-
+* IRecipeRepo
+  * findByPostOwner
+  * updateTitle
+  * updateIngredients
+  * updateInstructions
 
 * ITokenRepo
     * findFirstByTokenValue
@@ -68,9 +84,9 @@
 
 ### 4. Data Source
 ```java
-  spring.datasource.url=jdbc:mysql://localhost:3306/restaurant
-  spring.datasource.username=root
-  spring.datasource.password=root
+  spring.datasource.url=jdbc:mysql://localhost:3306/recipe
+  spring.datasource.username=kakarot
+  spring.datasource.password=1234
   spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
   spring.jpa.hibernate.ddl-auto=update
 
@@ -83,5 +99,6 @@
 * List
 
 ## Project Summary
-The Restaurant Api is used to order a food and  a user can see food without sign up  if user can order a food when user sign in, and admin can add food , see all the users and etc.
-   
+A Recipe Management System API is a software interface that allows developers to interact with and manipulate data related to recipes within a Recipe Management System. This API enables various functions and operations, such as creating, retrieving, updating, and deleting recipes, as well as searching and filtering recipes based on specific criteria.
+
+Recipe Management System API is a powerful tool that simplifies the development of applications and services focused on recipe management and cooking, allowing users to efficiently organize, discover, and share their favorite recipes.
