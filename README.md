@@ -84,7 +84,7 @@
 
 ### 4. Data Source
 ```java
-  spring.datasource.url=jdbc:mysql://localhost:3306/recipe
+  spring.datasource.url=jdbc:mysql://65.0.109.60:3306/recipe
   spring.datasource.username=kakarot
   spring.datasource.password=1234
   spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
