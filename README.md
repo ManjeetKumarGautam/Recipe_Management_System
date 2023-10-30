@@ -99,7 +99,6 @@
 * List
 
 ## Project Summary
-
 A Recipe Management System API is a software interface that allows developers to interact with and manipulate data related to recipes within a Recipe Management System. This API enables various functions and operations, such as creating, retrieving, updating, and deleting recipes, as well as searching and filtering recipes based on specific criteria.
 
 Recipe Management System API is a powerful tool that simplifies the development of applications and services focused on recipe management and cooking, allowing users to efficiently organize, discover, and share their favorite recipes.
